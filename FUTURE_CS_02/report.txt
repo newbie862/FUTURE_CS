@@ -1,0 +1,37 @@
+🧾 Incident Response Report – SOC Task 2
+
+Date: 2025-10-17
+Analyst: JEET
+System: Simulated SOC Log Dataset
+
+🔍 Summary
+
+Multiple malware detections and suspicious logins were identified across several users (alice, bob, david, eve, charlie). The activity suggests possible compromise and lateral movement attempts from infected IPs.
+⚠️ Key Suspicious Alerts
+No	Timestamp	User	IP	Action	Severity
+1	05:48:14	bob	10.0.0.5	Malware Detected – Trojan	High
+2	04:19:14	alice	198.51.100.42	Malware Detected – Rootkit	High
+3	05:06:14	bob	203.0.113.77	Malware Detected – Worm	High
+4	09:10:14	bob	172.16.0.3	Malware Detected – Ransomware	Critical
+5	07:02:14	alice	203.0.113.77	Login Failed (Brute-Force Attempt)	Medium
+🕒 Timeline (Condensed)
+
+04:19–05:50 → Multiple malware detections (Trojan, Rootkit, Worm).
+
+06:00–08:00 → Repeated file access from compromised IPs.
+
+09:10 → Ransomware-like behavior observed on 172.16.0.3.
+
+💥 Impact
+
+High risk of malware propagation and credential compromise across internal IP ranges.
+
+🧯 Recommended Actions
+
+Isolate infected systems (IPs: 10.0.0.5, 198.51.100.42, 172.16.0.3).
+
+Reimage affected hosts and change credentials.
+
+Block malicious IPs in firewall.
+
+Enable enhanced malware scanning and MFA.
