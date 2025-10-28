@@ -1,0 +1,21 @@
+Security Scan Report
+Website: testphp.vulnweb.com  
+Scanner: Mozilla Observatory  
+Scan Date: 17th Oct, 2025. 
+
+Vulnerabilities Found:
+1. Missing Security Headers 
+   - Content Security Policy (CSP) not implemented  
+   - X-Content-Type-Options header missing  
+
+2. Cookie Security Issues 
+   - Session cookies not marked as "Secure"  
+   - No HttpOnly flag on cookies  
+
+3. Server Information Exposure 
+   - PHP version exposed (potential security risk)  
+
+Recommendations:
+- Add HTTP security headers  
+- Implement HTTPS encryption  
+- Update server software
