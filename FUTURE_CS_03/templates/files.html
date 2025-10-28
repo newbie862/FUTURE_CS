@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Files</title>
+</head>
+<body>
+  <h3>Encrypted Files</h3>
+  <ul>
+  {% for fid, name in files %}
+    <li>{{ name }} — <a href="/download/{{ fid }}">Download</a></li>
+  {% endfor %}
+  </ul>
+  <a href="/">Upload another file</a>
+</body>
+</html>
